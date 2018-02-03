@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E376546B-6105-4F26-910D-A63261A59974}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\activemasternode.cpp" />
+    <ClCompile Include="src\addrman.cpp" />
+    <ClCompile Include="src\alert.cpp" />
+    <ClCompile Include="src\amount.cpp" />
+    <ClCompile Include="src\arith_uint256.cpp" />
+    <ClCompile Include="src\base58.cpp" />
+    <ClCompile Include="src\bench\bench.cpp" />
+    <ClCompile Include="src\bench\bench_gobyte.cpp" />
+    <ClCompile Include="src\bench\Examples.cpp" />
+    <ClCompile Include="src\bloom.cpp" />
+    <ClCompile Include="src\chain.cpp" />
+    <ClCompile Include="src\chainparams.cpp" />
+    <ClCompile Include="src\chainparamsbase.cpp" />
+    <ClCompile Include="src\checkpoints.cpp" />
+    <ClCompile Include="src\clientversion.cpp" />
+    <ClCompile Include="src\coins.cpp" />
+    <ClCompile Include="src\compat\glibcxx_sanity.cpp" />
+    <ClCompile Include="src\compat\glibc_compat.cpp" />
+    <ClCompile Include="src\compat\glibc_sanity.cpp" />
+    <ClCompile Include="src\compat\strnlen.cpp" />
+    <ClCompile Include="src\compressor.cpp" />
+    <ClCompile Include="src\consensus\merkle.cpp" />
+    <ClCompile Include="src\core_read.cpp" />
+    <ClCompile Include="src\core_write.cpp" />
+    <ClCompile Include="src\crypto\aes_helper.c" />
+    <ClCompile Include="src\crypto\blake.c" />
+    <ClCompile Include="src\crypto\bmw.c" />
+    <ClCompile Include="src\crypto\cubehash.c" />
+    <ClCompile Include="src\crypto\echo.c" />
+    <ClCompile Include="src\crypto\groestl.c" />
+    <ClCompile Include="src\crypto\hmac_sha256.cpp" />
+    <ClCompile Include="src\crypto\hmac_sha512.cpp" />
+    <ClCompile Include="src\crypto\jh.c" />
+    <ClCompile Include="src\crypto\keccak.c" />
+    <ClCompile Include="src\crypto\luffa.c" />
+    <ClCompile Include="src\crypto\neoscrypt.c" />
+    <ClCompile Include="src\crypto\ripemd160.cpp" />
+    <ClCompile Include="src\crypto\sha1.cpp" />
+    <ClCompile Include="src\crypto\sha256.cpp" />
+    <ClCompile Include="src\crypto\sha512.cpp" />
+    <ClCompile Include="src\crypto\shavite.c" />
+    <ClCompile Include="src\crypto\simd.c" />
+    <ClCompile Include="src\crypto\skein.c" />
+    <ClCompile Include="src\darksend-relay.cpp" />
+    <ClCompile Include="src\darksend.cpp" />
+    <ClCompile Include="src\dbwrapper.cpp" />
+    <ClCompile Include="src\drafted\governance-keys.cpp" />
+    <ClCompile Include="src\drafted\governance-types.cpp" />
+    <ClCompile Include="src\drafted\governance.new.cpp" />
+    <ClCompile Include="src\dsnotificationinterface.cpp" />
+    <ClCompile Include="src\gobyte-cli.cpp" />
+    <ClCompile Include="src\gobyte-tx.cpp" />
+    <ClCompile Include="src\gobyted.cpp" />
+    <ClCompile Include="src\governance-classes.cpp" />
+    <ClCompile Include="src\governance-object.cpp" />
+    <ClCompile Include="src\governance-vote.cpp" />
+    <ClCompile Include="src\governance-votedb.cpp" />
+    <ClCompile Include="src\governance.cpp" />
+    <ClCompile Include="src\hash.cpp" />
+    <ClCompile Include="src\httprpc.cpp" />
+    <ClCompile Include="src\httpserver.cpp" />
+    <ClCompile Include="src\init.cpp" />
+    <ClCompile Include="src\instantx.cpp" />
+    <ClCompile Include="src\keepass.cpp" />
+    <ClCompile Include="src\key.cpp" />
+    <ClCompile Include="src\keystore.cpp" />
+    <ClCompile Include="src\leveldb\db\autocompact_test.cc" />
+    <ClCompile Include="src\leveldb\db\builder.cc" />
+    <ClCompile Include="src\leveldb\db\c.cc" />
+    <ClCompile Include="src\leveldb\db\corruption_test.cc" />
+    <ClCompile Include="src\leveldb\db\c_test.c" />
+    <ClCompile Include="src\leveldb\db\dbformat.cc" />
+    <ClCompile Include="src\leveldb\db\dbformat_test.cc" />
+    <ClCompile Include="src\leveldb\db\db_bench.cc" />
+    <ClCompile Include="src\leveldb\db\db_impl.cc" />
+    <ClCompile Include="src\leveldb\db\db_iter.cc" />
+    <ClCompile Include="src\leveldb\db\db_test.cc" />
+    <ClCompile Include="src\leveldb\db\dumpfile.cc" />
+    <ClCompile Include="src\leveldb\db\filename.cc" />
+    <ClCompile Include="src\leveldb\db\filename_test.cc" />
+    <ClCompile Include="src\leveldb\db\leveldb_main.cc" />
+    <ClCompile Include="src\leveldb\db\log_reader.cc" />
+    <ClCompile Include="src\leveldb\db\log_test.cc" />
+    <ClCompile Include="src\leveldb\db\log_writer.cc" />
+    <ClCompile Include="src\leveldb\db\memtable.cc" />
+    <ClCompile Include="src\leveldb\db\repair.cc" />
+    <ClCompile Include="src\leveldb\db\skiplist_test.cc" />
+    <ClCompile Include="src\leveldb\db\table_cache.cc" />
+    <ClCompile Include="src\leveldb\db\version_edit.cc" />
+    <ClCompile Include="src\leveldb\db\version_edit_test.cc" />
+    <ClCompile Include="src\leveldb\db\version_set.cc" />
+    <ClCompile Include="src\leveldb\db\version_set_test.cc" />
+    <ClCompile Include="src\leveldb\db\write_batch.cc" />
+    <ClCompile Include="src\leveldb\db\write_batch_test.cc" />
+    <ClCompile Include="src\leveldb\doc\bench\db_bench_sqlite3.cc" />
+    <ClCompile Include="src\leveldb\doc\bench\db_bench_tree_db.cc" />
+    <ClCompile Include="src\leveldb\helpers\memenv\memenv.cc" />
+    <ClCompile Include="src\leveldb\helpers\memenv\memenv_test.cc" />
+    <ClCompile Include="src\leveldb\issues\issue178_test.cc" />
+    <ClCompile Include="src\leveldb\issues\issue200_test.cc" />
+    <ClCompile Include="src\leveldb\port\port_posix.cc" />
+    <ClCompile Include="src\leveldb\port\port_win.cc" />
+    <ClCompile Include="src\leveldb\table\block.cc" />
+    <ClCompile Include="src\leveldb\table\block_builder.cc" />
+    <ClCompile Include="src\leveldb\table\filter_block.cc" />
+    <ClCompile Include="src\leveldb\table\filter_block_test.cc" />
+    <ClCompile Include="src\leveldb\table\format.cc" />
+    <ClCompile Include="src\leveldb\table\iterator.cc" />
+    <ClCompile Include="src\leveldb\table\merger.cc" />
+    <ClCompile Include="src\leveldb\table\table.cc" />
+    <ClCompile Include="src\leveldb\table\table_builder.cc" />
+    <ClCompile Include="src\leveldb\table\table_test.cc" />
+    <ClCompile Include="src\leveldb\table\two_level_iterator.cc" />
+    <ClCompile Include="src\leveldb\util\arena.cc" />
+    <ClCompile Include="src\leveldb\util\arena_test.cc" />
+    <ClCompile Include="src\leveldb\util\bloom.cc" />
+    <ClCompile Include="src\leveldb\util\bloom_test.cc" />
+    <ClCompile Include="src\leveldb\util\cache.cc" />
+    <ClCompile Include="src\leveldb\util\cache_test.cc" />
+    <ClCompile Include="src\leveldb\util\coding.cc" />
+    <ClCompile Include="src\leveldb\util\coding_test.cc" />
+    <ClCompile Include="src\leveldb\util\comparator.cc" />
+    <ClCompile Include="src\leveldb\util\crc32c.cc" />
+    <ClCompile Include="src\leveldb\util\crc32c_test.cc" />
+    <ClCompile Include="src\leveldb\util\env.cc" />
+    <ClCompile Include="src\leveldb\util\env_posix.cc" />
+    <ClCompile Include="src\leveldb\util\env_test.cc" />
+    <ClCompile Include="src\leveldb\util\env_win.cc" />
+    <ClCompile Include="src\leveldb\util\filter_policy.cc" />
+    <ClCompile Include="src\leveldb\util\hash.cc" />
+    <ClCompile Include="src\leveldb\util\hash_test.cc" />
+    <ClCompile Include="src\leveldb\util\histogram.cc" />
+    <ClCompile Include="src\leveldb\util\logging.cc" />
+    <ClCompile Include="src\leveldb\util\options.cc" />
+    <ClCompile Include="src\leveldb\util\status.cc" />
+    <ClCompile Include="src\leveldb\util\testharness.cc" />
+    <ClCompile Include="src\leveldb\util\testutil.cc" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\masternode-payments.cpp" />
+    <ClCompile Include="src\masternode-sync.cpp" />
+    <ClCompile Include="src\masternode.cpp" />
+    <ClCompile Include="src\masternodeconfig.cpp" />
+    <ClCompile Include="src\masternodeman.cpp" />
+    <ClCompile Include="src\merkleblock.cpp" />
+    <ClCompile Include="src\miner.cpp" />
+    <ClCompile Include="src\net.cpp" />
+    <ClCompile Include="src\netbase.cpp" />
+    <ClCompile Include="src\netfulfilledman.cpp" />
+    <ClCompile Include="src\noui.cpp" />
+    <ClCompile Include="src\policy\fees.cpp" />
+    <ClCompile Include="src\policy\policy.cpp" />
+    <ClCompile Include="src\policy\rbf.cpp" />
+    <ClCompile Include="src\pow.cpp" />
+    <ClCompile Include="src\primitives\block.cpp" />
+    <ClCompile Include="src\primitives\transaction.cpp" />
+    <ClCompile Include="src\protocol.cpp" />
+    <ClCompile Include="src\pubkey.cpp" />
+    <ClCompile Include="src\qt\addressbookpage.cpp" />
+    <ClCompile Include="src\qt\addresstablemodel.cpp" />
+    <ClCompile Include="src\qt\askpassphrasedialog.cpp" />
+    <ClCompile Include="src\qt\bantablemodel.cpp" />
+    <ClCompile Include="src\qt\bitcoinaddressvalidator.cpp" />
+    <ClCompile Include="src\qt\bitcoinamountfield.cpp" />
+    <ClCompile Include="src\qt\bitcoingui.cpp" />
+    <ClCompile Include="src\qt\bitcoinunits.cpp" />
+    <ClCompile Include="src\qt\clientmodel.cpp" />
+    <ClCompile Include="src\qt\coincontroldialog.cpp" />
+    <ClCompile Include="src\qt\coincontroltreewidget.cpp" />
+    <ClCompile Include="src\qt\csvmodelwriter.cpp" />
+    <ClCompile Include="src\qt\darksendconfig.cpp" />
+    <ClCompile Include="src\qt\editaddressdialog.cpp" />
+    <ClCompile Include="src\qt\gobyte.cpp" />
+    <ClCompile Include="src\qt\gobytestrings.cpp" />
+    <ClCompile Include="src\qt\guiutil.cpp" />
+    <ClCompile Include="src\qt\intro.cpp" />
+    <ClCompile Include="src\qt\masternodelist.cpp" />
+    <ClCompile Include="src\qt\networkstyle.cpp" />
+    <ClCompile Include="src\qt\notificator.cpp" />
+    <ClCompile Include="src\qt\openuridialog.cpp" />
+    <ClCompile Include="src\qt\optionsdialog.cpp" />
+    <ClCompile Include="src\qt\optionsmodel.cpp" />
+    <ClCompile Include="src\qt\overviewpage.cpp" />
+    <ClCompile Include="src\qt\paymentrequestplus.cpp" />
+    <ClCompile Include="src\qt\paymentserver.cpp" />
+    <ClCompile Include="src\qt\peertablemodel.cpp" />
+    <ClCompile Include="src\qt\platformstyle.cpp" />
+    <ClCompile Include="src\qt\qvalidatedlineedit.cpp" />
+    <ClCompile Include="src\qt\qvaluecombobox.cpp" />
+    <ClCompile Include="src\qt\receivecoinsdialog.cpp" />
+    <ClCompile Include="src\qt\receiverequestdialog.cpp" />
+    <ClCompile Include="src\qt\recentrequeststablemodel.cpp" />
+    <ClCompile Include="src\qt\rpcconsole.cpp" />
+    <ClCompile Include="src\qt\sendcoinsdialog.cpp" />
+    <ClCompile Include="src\qt\sendcoinsentry.cpp" />
+    <ClCompile Include="src\qt\signverifymessagedialog.cpp" />
+    <ClCompile Include="src\qt\splashscreen.cpp" />
+    <ClCompile Include="src\qt\trafficgraphwidget.cpp" />
+    <ClCompile Include="src\qt\transactiondesc.cpp" />
+    <ClCompile Include="src\qt\transactiondescdialog.cpp" />
+    <ClCompile Include="src\qt\transactionfilterproxy.cpp" />
+    <ClCompile Include="src\qt\transactionrecord.cpp" />
+    <ClCompile Include="src\qt\transactiontablemodel.cpp" />
+    <ClCompile Include="src\qt\transactionview.cpp" />
+    <ClCompile Include="src\qt\utilitydialog.cpp" />
+    <ClCompile Include="src\qt\walletframe.cpp" />
+    <ClCompile Include="src\qt\walletmodel.cpp" />
+    <ClCompile Include="src\qt\walletmodeltransaction.cpp" />
+    <ClCompile Include="src\qt\walletview.cpp" />
+    <ClCompile Include="src\qt\winshutdownmonitor.cpp" />
+    <ClCompile Include="src\random.cpp" />
+    <ClCompile Include="src\rest.cpp" />
+    <ClCompile Include="src\rpcblockchain.cpp" />
+    <ClCompile Include="src\rpcclient.cpp" />
+    <ClCompile Include="src\rpcgovernance.cpp" />
+    <ClCompile Include="src\rpcmasternode.cpp" />
+    <ClCompile Include="src\rpcmining.cpp" />
+    <ClCompile Include="src\rpcmisc.cpp" />
+    <ClCompile Include="src\rpcnet.cpp" />
+    <ClCompile Include="src\rpcprotocol.cpp" />
+    <ClCompile Include="src\rpcrawtransaction.cpp" />
+    <ClCompile Include="src\rpcserver.cpp" />
+    <ClCompile Include="src\scheduler.cpp" />
+    <ClCompile Include="src\sendalert.cpp" />
+    <ClCompile Include="src\spork.cpp" />
+    <ClCompile Include="src\sync.cpp" />
+    <ClCompile Include="src\timedata.cpp" />
+    <ClCompile Include="src\torcontrol.cpp" />
+    <ClCompile Include="src\txdb.cpp" />
+    <ClCompile Include="src\txmempool.cpp" />
+    <ClCompile Include="src\uint256.cpp" />
+    <ClCompile Include="src\util.cpp" />
+    <ClCompile Include="src\utilmoneystr.cpp" />
+    <ClCompile Include="src\utilstrencodings.cpp" />
+    <ClCompile Include="src\utiltime.cpp" />
+    <ClCompile Include="src\validationinterface.cpp" />
+    <ClCompile Include="src\versionbits.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\activemasternode.h" />
+    <ClInclude Include="src\addressindex.h" />
+    <ClInclude Include="src\addrman.h" />
+    <ClInclude Include="src\alert.h" />
+    <ClInclude Include="src\amount.h" />
+    <ClInclude Include="src\arith_uint256.h" />
+    <ClInclude Include="src\base58.h" />
+    <ClInclude Include="src\bench\bench.h" />
+    <ClInclude Include="src\bloom.h" />
+    <ClInclude Include="src\cachemap.h" />
+    <ClInclude Include="src\cachemultimap.h" />
+    <ClInclude Include="src\chain.h" />
+    <ClInclude Include="src\chainparams.h" />
+    <ClInclude Include="src\chainparamsbase.h" />
+    <ClInclude Include="src\chainparamsseeds.h" />
+    <ClInclude Include="src\checkpoints.h" />
+    <ClInclude Include="src\checkqueue.h" />
+    <ClInclude Include="src\clientversion.h" />
+    <ClInclude Include="src\coincontrol.h" />
+    <ClInclude Include="src\coins.h" />
+    <ClInclude Include="src\compat.h" />
+    <ClInclude Include="src\compat\byteswap.h" />
+    <ClInclude Include="src\compat\endian.h" />
+    <ClInclude Include="src\compat\sanity.h" />
+    <ClInclude Include="src\compressor.h" />
+    <ClInclude Include="src\consensus\consensus.h" />
+    <ClInclude Include="src\consensus\merkle.h" />
+    <ClInclude Include="src\consensus\params.h" />
+    <ClInclude Include="src\consensus\validation.h" />
+    <ClInclude Include="src\core_io.h" />
+    <ClInclude Include="src\core_memusage.h" />
+    <ClInclude Include="src\crypto\common.h" />
+    <ClInclude Include="src\crypto\hmac_sha256.h" />
+    <ClInclude Include="src\crypto\hmac_sha512.h" />
+    <ClInclude Include="src\crypto\neoscrypt.h" />
+    <ClInclude Include="src\crypto\ripemd160.h" />
+    <ClInclude Include="src\crypto\sha1.h" />
+    <ClInclude Include="src\crypto\sha256.h" />
+    <ClInclude Include="src\crypto\sha512.h" />
+    <ClInclude Include="src\crypto\sph_blake.h" />
+    <ClInclude Include="src\crypto\sph_bmw.h" />
+    <ClInclude Include="src\crypto\sph_cubehash.h" />
+    <ClInclude Include="src\crypto\sph_echo.h" />
+    <ClInclude Include="src\crypto\sph_groestl.h" />
+    <ClInclude Include="src\crypto\sph_jh.h" />
+    <ClInclude Include="src\crypto\sph_keccak.h" />
+    <ClInclude Include="src\crypto\sph_luffa.h" />
+    <ClInclude Include="src\crypto\sph_shavite.h" />
+    <ClInclude Include="src\crypto\sph_simd.h" />
+    <ClInclude Include="src\crypto\sph_skein.h" />
+    <ClInclude Include="src\crypto\sph_types.h" />
+    <ClInclude Include="src\darksend-relay.h" />
+    <ClInclude Include="src\darksend.h" />
+    <ClInclude Include="src\dbwrapper.h" />
+    <ClInclude Include="src\drafted\governance-categories.h" />
+    <ClInclude Include="src\drafted\governance-classes.h" />
+    <ClInclude Include="src\drafted\governance-keys.h" />
+    <ClInclude Include="src\drafted\governance-types.h" />
+    <ClInclude Include="src\dsnotificationinterface.h" />
+    <ClInclude Include="src\flat-database.h" />
+    <ClInclude Include="src\governance-classes.h" />
+    <ClInclude Include="src\governance-exceptions.h" />
+    <ClInclude Include="src\governance-misc.h" />
+    <ClInclude Include="src\governance-object.h" />
+    <ClInclude Include="src\governance-vote.h" />
+    <ClInclude Include="src\governance-votedb.h" />
+    <ClInclude Include="src\governance.h" />
+    <ClInclude Include="src\hash.h" />
+    <ClInclude Include="src\httprpc.h" />
+    <ClInclude Include="src\httpserver.h" />
+    <ClInclude Include="src\init.h" />
+    <ClInclude Include="src\instantx.h" />
+    <ClInclude Include="src\keepass.h" />
+    <ClInclude Include="src\key.h" />
+    <ClInclude Include="src\keystore.h" />
+    <ClInclude Include="src\leveldb\db\builder.h" />
+    <ClInclude Include="src\leveldb\db\dbformat.h" />
+    <ClInclude Include="src\leveldb\db\db_impl.h" />
+    <ClInclude Include="src\leveldb\db\db_iter.h" />
+    <ClInclude Include="src\leveldb\db\filename.h" />
+    <ClInclude Include="src\leveldb\db\log_format.h" />
+    <ClInclude Include="src\leveldb\db\log_reader.h" />
+    <ClInclude Include="src\leveldb\db\log_writer.h" />
+    <ClInclude Include="src\leveldb\db\memtable.h" />
+    <ClInclude Include="src\leveldb\db\skiplist.h" />
+    <ClInclude Include="src\leveldb\db\snapshot.h" />
+    <ClInclude Include="src\leveldb\db\table_cache.h" />
+    <ClInclude Include="src\leveldb\db\version_edit.h" />
+    <ClInclude Include="src\leveldb\db\version_set.h" />
+    <ClInclude Include="src\leveldb\db\write_batch_internal.h" />
+    <ClInclude Include="src\leveldb\helpers\memenv\memenv.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\c.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\cache.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\comparator.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\db.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\dumpfile.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\env.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\filter_policy.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\iterator.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\options.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\slice.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\status.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\table.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\table_builder.h" />
+    <ClInclude Include="src\leveldb\include\leveldb\write_batch.h" />
+    <ClInclude Include="src\leveldb\port\atomic_pointer.h" />
+    <ClInclude Include="src\leveldb\port\port.h" />
+    <ClInclude Include="src\leveldb\port\port_example.h" />
+    <ClInclude Include="src\leveldb\port\port_posix.h" />
+    <ClInclude Include="src\leveldb\port\port_win.h" />
+    <ClInclude Include="src\leveldb\port\thread_annotations.h" />
+    <ClInclude Include="src\leveldb\port\win\stdint.h" />
+    <ClInclude Include="src\leveldb\table\block.h" />
+    <ClInclude Include="src\leveldb\table\block_builder.h" />
+    <ClInclude Include="src\leveldb\table\filter_block.h" />
+    <ClInclude Include="src\leveldb\table\format.h" />
+    <ClInclude Include="src\leveldb\table\iterator_wrapper.h" />
+    <ClInclude Include="src\leveldb\table\merger.h" />
+    <ClInclude Include="src\leveldb\table\two_level_iterator.h" />
+    <ClInclude Include="src\leveldb\util\arena.h" />
+    <ClInclude Include="src\leveldb\util\coding.h" />
+    <ClInclude Include="src\leveldb\util\crc32c.h" />
+    <ClInclude Include="src\leveldb\util\hash.h" />
+    <ClInclude Include="src\leveldb\util\histogram.h" />
+    <ClInclude Include="src\leveldb\util\logging.h" />
+    <ClInclude Include="src\leveldb\util\mutexlock.h" />
+    <ClInclude Include="src\leveldb\util\posix_logger.h" />
+    <ClInclude Include="src\leveldb\util\random.h" />
+    <ClInclude Include="src\leveldb\util\testharness.h" />
+    <ClInclude Include="src\leveldb\util\testutil.h" />
+    <ClInclude Include="src\limitedmap.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\masternode-payments.h" />
+    <ClInclude Include="src\masternode-sync.h" />
+    <ClInclude Include="src\masternode.h" />
+    <ClInclude Include="src\masternodeconfig.h" />
+    <ClInclude Include="src\masternodeman.h" />
+    <ClInclude Include="src\memusage.h" />
+    <ClInclude Include="src\merkleblock.h" />
+    <ClInclude Include="src\miner.h" />
+    <ClInclude Include="src\net.h" />
+    <ClInclude Include="src\netbase.h" />
+    <ClInclude Include="src\netfulfilledman.h" />
+    <ClInclude Include="src\noui.h" />
+    <ClInclude Include="src\policy\fees.h" />
+    <ClInclude Include="src\policy\policy.h" />
+    <ClInclude Include="src\policy\rbf.h" />
+    <ClInclude Include="src\pow.h" />
+    <ClInclude Include="src\prevector.h" />
+    <ClInclude Include="src\primitives\block.h" />
+    <ClInclude Include="src\primitives\transaction.h" />
+    <ClInclude Include="src\protocol.h" />
+    <ClInclude Include="src\pubkey.h" />
+    <ClInclude Include="src\qt\addressbookpage.h" />
+    <ClInclude Include="src\qt\addresstablemodel.h" />
+    <ClInclude Include="src\qt\askpassphrasedialog.h" />
+    <ClInclude Include="src\qt\bantablemodel.h" />
+    <ClInclude Include="src\qt\bitcoinaddressvalidator.h" />
+    <ClInclude Include="src\qt\bitcoinamountfield.h" />
+    <ClInclude Include="src\qt\bitcoingui.h" />
+    <ClInclude Include="src\qt\bitcoinunits.h" />
+    <ClInclude Include="src\qt\clientmodel.h" />
+    <ClInclude Include="src\qt\coincontroldialog.h" />
+    <ClInclude Include="src\qt\coincontroltreewidget.h" />
+    <ClInclude Include="src\qt\csvmodelwriter.h" />
+    <ClInclude Include="src\qt\darksendconfig.h" />
+    <ClInclude Include="src\qt\editaddressdialog.h" />
+    <ClInclude Include="src\qt\guiconstants.h" />
+    <ClInclude Include="src\qt\guiutil.h" />
+    <ClInclude Include="src\qt\intro.h" />
+    <ClInclude Include="src\qt\macdockiconhandler.h" />
+    <ClInclude Include="src\qt\macnotificationhandler.h" />
+    <ClInclude Include="src\qt\masternodelist.h" />
+    <ClInclude Include="src\qt\networkstyle.h" />
+    <ClInclude Include="src\qt\notificator.h" />
+    <ClInclude Include="src\qt\openuridialog.h" />
+    <ClInclude Include="src\qt\optionsdialog.h" />
+    <ClInclude Include="src\qt\optionsmodel.h" />
+    <ClInclude Include="src\qt\overviewpage.h" />
+    <ClInclude Include="src\qt\paymentrequestplus.h" />
+    <ClInclude Include="src\qt\paymentserver.h" />
+    <ClInclude Include="src\qt\peertablemodel.h" />
+    <ClInclude Include="src\qt\platformstyle.h" />
+    <ClInclude Include="src\qt\qvalidatedlineedit.h" />
+    <ClInclude Include="src\qt\qvaluecombobox.h" />
+    <ClInclude Include="src\qt\receivecoinsdialog.h" />
+    <ClInclude Include="src\qt\receiverequestdialog.h" />
+    <ClInclude Include="src\qt\recentrequeststablemodel.h" />
+    <ClInclude Include="src\qt\rpcconsole.h" />
+    <ClInclude Include="src\qt\sendcoinsdialog.h" />
+    <ClInclude Include="src\qt\sendcoinsentry.h" />
+    <ClInclude Include="src\qt\signverifymessagedialog.h" />
+    <ClInclude Include="src\qt\splashscreen.h" />
+    <ClInclude Include="src\qt\trafficgraphwidget.h" />
+    <ClInclude Include="src\qt\transactiondesc.h" />
+    <ClInclude Include="src\qt\transactiondescdialog.h" />
+    <ClInclude Include="src\qt\transactionfilterproxy.h" />
+    <ClInclude Include="src\qt\transactionrecord.h" />
+    <ClInclude Include="src\qt\transactiontablemodel.h" />
+    <ClInclude Include="src\qt\transactionview.h" />
+    <ClInclude Include="src\qt\utilitydialog.h" />
+    <ClInclude Include="src\qt\walletframe.h" />
+    <ClInclude Include="src\qt\walletmodel.h" />
+    <ClInclude Include="src\qt\walletmodeltransaction.h" />
+    <ClInclude Include="src\qt\walletview.h" />
+    <ClInclude Include="src\qt\winshutdownmonitor.h" />
+    <ClInclude Include="src\random.h" />
+    <ClInclude Include="src\reverselock.h" />
+    <ClInclude Include="src\rpcclient.h" />
+    <ClInclude Include="src\rpcprotocol.h" />
+    <ClInclude Include="src\rpcserver.h" />
+    <ClInclude Include="src\scheduler.h" />
+    <ClInclude Include="src\serialize.h" />
+    <ClInclude Include="src\spentindex.h" />
+    <ClInclude Include="src\spork.h" />
+    <ClInclude Include="src\streams.h" />
+    <ClInclude Include="src\sync.h" />
+    <ClInclude Include="src\threadsafety.h" />
+    <ClInclude Include="src\timedata.h" />
+    <ClInclude Include="src\tinyformat.h" />
+    <ClInclude Include="src\torcontrol.h" />
+    <ClInclude Include="src\txdb.h" />
+    <ClInclude Include="src\txmempool.h" />
+    <ClInclude Include="src\uint256.h" />
+    <ClInclude Include="src\ui_interface.h" />
+    <ClInclude Include="src\undo.h" />
+    <ClInclude Include="src\util.h" />
+    <ClInclude Include="src\utilmoneystr.h" />
+    <ClInclude Include="src\utilstrencodings.h" />
+    <ClInclude Include="src\utiltime.h" />
+    <ClInclude Include="src\validationinterface.h" />
+    <ClInclude Include="src\version.h" />
+    <ClInclude Include="src\versionbits.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\gobyte-cli-res.rc" />
+    <ResourceCompile Include="src\gobyte-tx-res.rc" />
+    <ResourceCompile Include="src\gobyted-res.rc" />
+    <ResourceCompile Include="src\qt\res\gobyte-qt-res.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\leveldb\doc\benchmark.html" />
+    <None Include="src\leveldb\doc\impl.html" />
+    <None Include="src\leveldb\doc\index.html" />
+    <None Include="src\Makefile.bench.include" />
+    <None Include="src\Makefile.leveldb.include" />
+    <None Include="src\Makefile.qt.include" />
+    <None Include="src\Makefile.qttest.include" />
+    <None Include="src\Makefile.test.include" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
