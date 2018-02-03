@@ -1,0 +1,6 @@
+usr/local/bin/cup-qt usr/bin
+share/pixmaps/cup32.xpm usr/share/pixmaps
+share/pixmaps/cup16.xpm usr/share/pixmaps
+share/pixmaps/cup128.png usr/share/pixmaps
+debian/cup-qt.desktop usr/share/applications
+debian/cup-qt.protocol usr/share/kde4/services/

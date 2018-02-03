@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Cup
+Comment=Cup P2P Cryptocurrency
+Comment[fr]=Cup, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Cup, eşten eşe kriptografik sanal para birimi
+Exec=cup-qt %u
+Terminal=false
+Type=Application
+Icon=cup128
+MimeType=x-scheme-handler/cup;
+Categories=Office;Finance;

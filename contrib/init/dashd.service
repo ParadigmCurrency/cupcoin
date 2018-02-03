@@ -1,0 +1,22 @@
+[Unit]
+Description=Cup's distributed currency daemon
+After=network.target
+
+[Service]
+User=cupcore
+Group=cupcore
+
+Type=forking
+PIDFile=/var/lib/cupd/cupd.pid
+ExecStart=/usr/bin/cupd -daemon -pid=/var/lib/cupd/cupd.pid \
+-conf=/etc/cupcore/cup.conf -datadir=/var/lib/cupd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

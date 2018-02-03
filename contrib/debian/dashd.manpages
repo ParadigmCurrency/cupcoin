@@ -1,0 +1,3 @@
+debian/manpages/cupd.1
+debian/manpages/cup.conf.5
+debian/manpages/cup-cli.1

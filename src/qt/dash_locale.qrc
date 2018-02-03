@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cup_bg.qm</file>
+        <file alias="de">locale/cup_de.qm</file>
+        <file alias="en">locale/cup_en.qm</file>
+        <file alias="es">locale/cup_es.qm</file>
+        <file alias="fi">locale/cup_fi.qm</file>
+        <file alias="fr">locale/cup_fr.qm</file>
+        <file alias="it">locale/cup_it.qm</file>
+        <file alias="ja">locale/cup_ja.qm</file>
+        <file alias="pl">locale/cup_pl.qm</file>
+        <file alias="pt">locale/cup_pt.qm</file>
+        <file alias="ru">locale/cup_ru.qm</file>
+        <file alias="sk">locale/cup_sk.qm</file>
+        <file alias="sv">locale/cup_sv.qm</file>
+        <file alias="vi">locale/cup_vi.qm</file>
+        <file alias="zh_CN">locale/cup_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cup_zh_TW.qm</file>
+    </qresource>
+</RCC>
